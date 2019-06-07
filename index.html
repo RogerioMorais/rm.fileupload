@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rogério Morais Fileupload</title>
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="jquery.rm.fileupload.js"></script>
+    <script>
+        $(document).ready(function () {
+            console.log("ready!");
+            $("#upload").FileUpload({
+                urlTarget: "http://www.exemplo.com.br",
+                callBackSuccess: function (data) { alert('Do something to succeed'); },
+                callBackError: function (data) { alert('Do something when it fails'); },
+                callBackComplete: function (data) { alert('Do something to complete'); },
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="upload"></div>
+
+</body>
+</html>
